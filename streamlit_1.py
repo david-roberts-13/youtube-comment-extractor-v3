@@ -31,9 +31,13 @@ from nltk.stem import WordNetLemmatizer
 
 import json 
 
+def getJSON(filePathAndName):
+	with open(filePathAndName, 'r') as fp:
+		return json.load(fp)
+
 #client= {"installed":{"client_id":"552781266117-lmvt9f6566pa9h6f4h75v29e19h311va.apps.googleusercontent.com","project_id":"youtube-comment-project-v3","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"jSz-cLr3CC0av9NUAXKpptAt","redirect_uris":["urn:ietf:wg:oauth:2.0:oob","http://localhost"]}}
 #test12
-client1= json.loads('client_secret.json')
+client1= getJSON('./client_secret.json')
 
 header = st.beta_container()
 dataset = st.beta_container()
