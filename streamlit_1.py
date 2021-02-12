@@ -19,7 +19,7 @@ import unicodedata
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
-
+import json 
 import urllib.parse as p
 import os
 
@@ -29,10 +29,11 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords, wordnet
 from nltk.stem import WordNetLemmatizer
 
+import json 
 
-client= {"installed":{"client_id":"552781266117-lmvt9f6566pa9h6f4h75v29e19h311va.apps.googleusercontent.com","project_id":"youtube-comment-project-v3","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"jSz-cLr3CC0av9NUAXKpptAt","redirect_uris":["urn:ietf:wg:oauth:2.0:oob","http://localhost"]}}
+#client= {"installed":{"client_id":"552781266117-lmvt9f6566pa9h6f4h75v29e19h311va.apps.googleusercontent.com","project_id":"youtube-comment-project-v3","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"jSz-cLr3CC0av9NUAXKpptAt","redirect_uris":["urn:ietf:wg:oauth:2.0:oob","http://localhost"]}}
 #test12
-
+client= json.load('client_secret.json')
 
 header = st.beta_container()
 dataset = st.beta_container()
