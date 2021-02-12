@@ -1,0 +1,12 @@
+plotly==4.9.0
+numpy==1.18.5
+google_auth_oauthlib==0.4.2
+nltk==3.5
+contractions==0.0.45
+textblob==0.15.3
+spacy==2.3.5
+streamlit==0.75.0
+pandas==1.0.5
+beautifulsoup4==4.9.3
+google_api_python_client==1.12.8
+protobuf==3.14.0
